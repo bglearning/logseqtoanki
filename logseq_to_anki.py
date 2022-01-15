@@ -71,6 +71,9 @@ def main():
         if "collapsed::" in line:
             continue
 
+        if "[[Self/Note]]" in line:
+            continue
+
         num_of_tabs = line.count('\t')
         untabbed_line = line.replace('\t', '')
         if untabbed_line.startswith('- '):
